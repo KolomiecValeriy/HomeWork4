@@ -6,5 +6,16 @@
             "email": "vel202007@gmail.com"
         }
     ],
-    "require": {}
+    "autoload": {
+		"psr-4": {
+		"Project\\": "src/",
+		"Pages\\": "src/Pages",
+		"Controllers\\": "src/Controllers"
+	}
+    },
+    "require": {
+		"php": ">= 5.5.9",
+		"symfony/routing": "^3.1",
+        "fzaninotto/faker": "^1.6"
+    }
 }
