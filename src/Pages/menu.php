@@ -18,11 +18,11 @@
 			</tr>
 			<tr>
 				<td>
-					<a href="index.php?page=show">Университеты</a>
+					<a href="index.php?page=showUniversityes">Университеты</a>
 				</td>
 			</tr>
 				<td>
-					<a href="#">Кафедры</a>
+					<a href="index.php?page=showDepartments">Кафедры</a>
 				</td>
 			<tr>
 				<td>

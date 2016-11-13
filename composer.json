@@ -8,6 +8,7 @@
     ],
     "autoload": {
 		"psr-4": {
+		"Project\\": "src/",
 		"Pages\\": "src/Pages",
 		"Controllers\\": "src/Controllers"
 	}

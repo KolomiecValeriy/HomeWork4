@@ -10,11 +10,12 @@ require_once __DIR__.'/vendor/autoload.php';
  *	);.
  */
 require_once 'config.php';
-
-if (!isset($_GET['page']) || $_GET['page'] == 'menu') {
-    require 'src/Pages/menu.php';
-} elseif ($_GET['page'] == 'show') {
-    require 'src/Pages/show.php';
+if (!isset($_GET['page'])){
+	$_GET['page'] = 'menu';
+}
+if (isset($_GET['page'])) {
+	$page = $_GET['page'];
+    require 'src/Pages/'.$page.'.php';
 }
 
     isset($_GET['action']) ? $action = $_GET['action'] : $action = false;
@@ -23,6 +24,6 @@ if (!isset($_GET['page']) || $_GET['page'] == 'menu') {
     if ($action == 'new_structure') {
         $controller->createStructure();
     }
-    if ($action == 'generate_data') {
+    elseif ($action == 'generate_data') {
         $controller->generateData();
     }
